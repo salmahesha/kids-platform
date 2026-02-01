@@ -1,0 +1,110 @@
+/* شاشات اللاب توب الصغيرة (أقل من 1024px) */
+@media (max-width: 1024px) {
+    .hero-text h1 {
+        font-size: 3.5rem;
+    }
+    .section-title {
+        font-size: 2.8rem;
+    }
+}
+
+/* الأجهزة اللوحية والتابلت (أقل من 992px) */
+@media (max-width: 992px) {
+    .hero-grid {
+        flex-direction: column-reverse; /* الصورة فوق النص في التابلت */
+        text-align: center;
+        gap: 20px;
+    }
+
+    .hero-image-box {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .hero-image-box img {
+        max-width: 220px; /* تصغير الصورة أكثر لتناسب التابلت */
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .split-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .subjects-grid {
+        grid-template-columns: repeat(2, 1fr); /* عرض مادتين بجانب بعض */
+    }
+}
+
+/* الهواتف الذكية الكبيرة (أقل من 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .nav-links {
+        display: none; /* إخفاء القائمة العلوية لتجنب الازدحام */
+    }
+
+    .hero-section {
+        padding: 120px 0 60px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+
+    .leaderboard-grid {
+        gap: 15px;
+    }
+
+    .leader-card {
+        width: calc(50% - 15px); /* بطلين بجانب بعض في الموبايل */
+    }
+
+    .challenge-input {
+        width: 90%;
+    }
+}
+
+/* الهواتف الصغيرة جداً (أقل من 480px) */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .subjects-grid {
+        grid-template-columns: 1fr; /* مادة واحدة في السطر لسهولة الضغط */
+    }
+
+    .leader-card {
+        width: 100%; /* بطل واحد في السطر */
+    }
+
+    .btn-primary, .btn-secondary, .btn-card {
+        width: 100%; /* الأزرار بعرض الشاشة ليسهل الضغط عليها */
+        padding: 12px 20px;
+        font-size: 1.1rem;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+}
