@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=Quicksand:wght@500;700&display=swap');
+
+:root {
+    --primary: #99CDD8;
+    --bg: #DAEBE8;
+    --yellow: #FDE803;
+    --pink: #F3C3B2;
+    --dark: #2D3436;
+    --white: #ffffff;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    background: var(--bg);
+    color: var(--dark);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.container { width:90%; max-width:1200px; margin:auto; }
+
+.navbar {
+    background: var(--primary);
+    padding: 15px 0;
+    position: fixed; width:100%; top:0; z-index:1000;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.nav-content { display:flex; justify-content:space-between; align-items:center; }
+
+.logo { font-family:'Outfit', sans-serif; font-size:1.8rem; font-weight:900; color: var(--white); }
+.logo span { color: var(--yellow); }
+
+.nav-links { display:flex; list-style:none; gap:20px; }
+.nav-links a { text-decoration:none; color: var(--white); font-weight:700; transition:0.3s; }
+.nav-links a:hover { color: var(--yellow); transform: scale(1.1); }
+
+.score-pill { 
+    background: var(--white); 
+    padding:10px 20px; 
+    border-radius:50px; 
+    color: var(--primary); 
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.section-padding { padding: 80px 0; }
+
+.section-title {
+    font-family:'Outfit', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--dark);
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.hero-section { padding:180px 0 80px; background: var(--white); border-radius:0 0 50px 50px; }
+
+.hero-grid { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 40px; 
+}
+
+.hero-text { flex: 1; }
+.hero-text h1 { font-size: 4.5rem; font-weight: 900; line-height: 1.1; margin-bottom: 25px; }
+.hero-text h1 span { color: var(--primary); background: linear-gradient(transparent 70%, #fff2ac 30%); }
+.hero-text p { font-size: 1.5rem; margin-bottom: 30px; color: #555; }
+
+.hero-image-box { flex: 1; text-align: right; }
+.hero-image-box img { width: 100%; max-width: 280px; border-radius: 30px; box-shadow: 15px 15px 0 var(--primary); }
+
+.subjects-grid, .games-grid, .video-grid, .challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card, .leader-card, .video-item, .game-card, .challenge-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover { transform: translateY(-10px); }
+
+.btn-primary, .btn-card, .btn-play-game, .btn-secondary {
+    border: none;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    padding: 15px 40px;
+    border-radius: 20px;
+    display: inline-block;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn-primary { background: #FF4757; color: white; box-shadow: 0 6px 0 #cc3a46; }
+.btn-card { background: #2ED573; color: white; box-shadow: 0 6px 0 #24a85b; }
+.btn-play-game { background: #1E90FF; color: white; box-shadow: 0 6px 0 #1873cc; }
+.btn-secondary { background: #FFA502; color: white; box-shadow: 0 6px 0 #cc8402; }
+
+button:active { transform: translateY(4px); box-shadow: 0 2px 0 rgba(0,0,0,0.2); }
+
+.leaderboard-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+.leader-card img { width: 100px; height: 100px; object-fit: cover; border: 4px solid var(--primary); border-radius: 50%; }
+
+.challenge-card { position: relative; overflow: hidden; height: 350px; padding: 0; }
+.challenge-card img { width: 100%; height: 100%; object-fit: cover; }
+.challenge-overlay { position: absolute; bottom: 0; background: rgba(255, 255, 255, 0.9); width: 100%; padding: 20px; }
+
+.challenge-input {
+    width: 100%; max-width: 500px; display: block; margin: 0 auto 30px;
+    padding: 15px 25px; border-radius: 50px; border: 3px solid var(--primary);
+    font-family: 'Quicksand', sans-serif; outline: none;
+}
+
+.footer { padding:40px; text-align:center; background: var(--dark); color: white; margin-top: 50px; border-radius: 40px 40px 0 0; }
