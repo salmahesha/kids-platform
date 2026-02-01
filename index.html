@@ -15,25 +15,30 @@
     <div class="container nav-content">
         <div class="logo">🚀 Fun<span>Brainy</span></div>
         
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="mobile-btn">Menu ▾</label>
+        
         <ul class="nav-links">
             <li><a href="#subjects">Subjects</a></li>
             <li><a href="#games">Games</a></li>
-            <li><a href="#new-skills">Skills ✨</a></li>
+            <li><a href="#new-skills" class="btn-yellow">Skills ✨</a></li>
             
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">More Fun ▾</a>
+            <li class="dropdown desktop-only">
+                <a href="#" class="dropbtn">More ▾</a>
                 <div class="dropdown-content">
                     <a href="#study">🧪 Study Lab</a>
                     <a href="#videos">📺 Videos</a>
                     <a href="#leaderboard">🏆 Top Heroes</a>
-                    <a href="#challenges">🚩 Daily Missions</a>
-                    <a href="#parents-tracking">👨‍👩‍👧‍👦 Parent Dashboard</a>
+                    <a href="#parents-tracking">👨‍👩‍👧‍👦 Dashboard</a>
                 </div>
             </li>
+
+            <li class="mobile-only"><a href="#study">🧪 Study Lab</a></li>
+            <li class="mobile-only"><a href="#videos">📺 Videos</a></li>
+            <li class="mobile-only"><a href="#parents-tracking">👨‍👩‍👧‍👦 Dashboard</a></li>
         </ul>
     </div>
-</nav>
-<!-- HERO -->
+</nav><!-- HERO -->
 <section id="home" class="hero-section">
 <div class="container hero-grid">
     <div class="hero-text">
